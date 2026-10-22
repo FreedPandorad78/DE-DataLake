@@ -1,0 +1,10 @@
+.env
+*.pem
+*.tfstate*
+.terraform/
+recursos_*.env
+__pycache__/
+logs/
+data/
+.DS_Store
+recursos_datalake.env

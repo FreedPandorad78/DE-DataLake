@@ -1,0 +1,14 @@
+Creando bucket bucket-taller-datalake-1792669239...
+Creando rol de IAM de la EC2...
+Creando EC2 t3.medium...
+Infraestructura lista:
+REGION=us-east-2
+BUCKET=bucket-taller-datalake-1792669239
+ROLE_NAME=taller-datalake-ec2-role
+PROFILE_NAME=taller-datalake-ec2-profile
+DATABASE=taller_datalake
+WORKGROUP=taller-datalake-wg
+SG_ID=sg-0d2b1f0d4848fcdbe
+KEY_NAME=taller-datalake-key
+INSTANCE_ID=i-0a7f4cbf2332706b9
+EC2_IP=18.216.148.112

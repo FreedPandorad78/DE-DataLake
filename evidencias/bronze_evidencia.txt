@@ -1,0 +1,164 @@
+
+=================== 1. Bucket privado (bloqueo de acceso público) ===================
+-----------------------------------
+|      GetPublicAccessBlock       |
++-------------------------+-------+
+|  BlockPublicAcls        |  True |
+|  BlockPublicPolicy      |  True |
+|  IgnorePublicAcls       |  True |
+|  RestrictPublicBuckets  |  True |
++-------------------------+-------+
+
+=================== 2. Archivos de Bronze en S3 ===================
+2026-10-22 07:05:07        890 bronze/_runs/run_id=manual__2026-10-22T12_00_30_00_00/summary.json
+2026-10-22 07:05:07      13324 bronze/source=eltiempo_colombia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml
+2026-10-22 07:05:07        581 bronze/source=eltiempo_colombia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/manifest.json
+2026-10-22 07:05:07      13523 bronze/source=eltiempo_justicia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml
+2026-10-22 07:05:07        581 bronze/source=eltiempo_justicia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/manifest.json
+2026-10-22 07:05:07      13271 bronze/source=eltiempo_medellin/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml
+2026-10-22 07:05:07        591 bronze/source=eltiempo_medellin/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/manifest.json
+
+=================== 3. Resumen del lote ===================
+{
+  "run_id": "manual__2026-10-22T12_00_30_00_00",
+  "ingestion_date": "2026-10-22",
+  "estado": "COMPLETA",
+  "fuentes": [
+    {
+      "source_id": "eltiempo_colombia",
+      "status": "OK",
+      "n_items": 10,
+      "bronze_key": "bronze/source=eltiempo_colombia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml"
+    },
+    {
+      "source_id": "eltiempo_medellin",
+      "status": "OK",
+      "n_items": 10,
+      "bronze_key": "bronze/source=eltiempo_medellin/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml"
+    },
+    {
+      "source_id": "eltiempo_justicia",
+      "status": "OK",
+      "n_items": 10,
+      "bronze_key": "bronze/source=eltiempo_justicia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml"
+    }
+  ],
+  "total_noticias_recibidas": 30,
+  "actualizado_utc": "2026-10-22T12:05:06+00:00"
+}
+=================== 4. Manifiesto de cada fuente ===================
+--- bronze/source=eltiempo_colombia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/manifest.json
+{
+  "run_id": "manual__2026-10-22T12_00_30_00_00",
+  "source_id": "eltiempo_colombia",
+  "medio": "El Tiempo",
+  "seccion": "Colombia",
+  "url": "https://www.eltiempo.com/rss/colombia.xml",
+  "ingestion_ts_utc": "2026-10-22T12:05:06+00:00",
+  "http_status": 200,
+  "content_sha256": "5647f759b94068e7889e6827dae7099b7da07836412f4e575adc340124c5d8af",
+  "content_length": 13324,
+  "n_items": 10,
+  "status": "OK",
+  "error": null,
+  "bronze_key": "bronze/source=eltiempo_colombia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml",
+  "reutilizado": false
+}
+--- bronze/source=eltiempo_justicia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/manifest.json
+{
+  "run_id": "manual__2026-10-22T12_00_30_00_00",
+  "source_id": "eltiempo_justicia",
+  "medio": "El Tiempo",
+  "seccion": "Justicia",
+  "url": "https://www.eltiempo.com/rss/justicia.xml",
+  "ingestion_ts_utc": "2026-10-22T12:05:06+00:00",
+  "http_status": 200,
+  "content_sha256": "d0323699fc5229aa068f30576aea0826df5e577a5ee817b0fc8f4fa4ea06d21d",
+  "content_length": 13523,
+  "n_items": 10,
+  "status": "OK",
+  "error": null,
+  "bronze_key": "bronze/source=eltiempo_justicia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml",
+  "reutilizado": false
+}
+--- bronze/source=eltiempo_medellin/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/manifest.json
+{
+  "run_id": "manual__2026-10-22T12_00_30_00_00",
+  "source_id": "eltiempo_medellin",
+  "medio": "El Tiempo",
+  "seccion": "Medellín",
+  "url": "https://www.eltiempo.com/rss/colombia_medellin.xml",
+  "ingestion_ts_utc": "2026-10-22T12:05:06+00:00",
+  "http_status": 200,
+  "content_sha256": "751f64cbe08856576b199a16de54a231952a9be4b1bb02f6bfa5fe2417430b39",
+  "content_length": 13271,
+  "n_items": 10,
+  "status": "OK",
+  "error": null,
+  "bronze_key": "bronze/source=eltiempo_medellin/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/feed.xml",
+  "reutilizado": false
+}
+
+=================== 5. Integridad: hash del manifiesto frente al hash del archivo guardado ===================
+COINCIDE   bronze/source=eltiempo_colombia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/
+COINCIDE   bronze/source=eltiempo_justicia/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/
+COINCIDE   bronze/source=eltiempo_medellin/ingestion_date=2026-10-22/run_id=manual__2026-10-22T12_00_30_00_00/
+
+=================== 6. Contenido original conservado (primeros 900 caracteres del feed de Colombia) ===================
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" version="2.0">
+    <channel>
+        <title>EL TIEMPO.COM -Colombia</title>
+        <description>Noticias de Encuentre las noticias mas recientes de Colombia. Cubrimientos en vivo, noticias locales, movilidad, seguridad y clima en El Tiempo.</description>
+        <image>
+            <url>https://www.eltiempo.com/bundles/eltiempocms/images/et-rss.png</url>
+            <title>EL TIEMPO.COM -Colombia</title>
+            <link>https://www.eltiempo.com</link>
+        </image>
+        <pubDate>Thu, 22 Oct 2026 06:46:52 -0500</pubDate>
+        <lastBuildDate>Thu, 22 Oct 2026 06:46:52 -0500</lastBuildDate>
+        <generator>Wf Feed Generator (https://www.eltiempo.com)</generator>
+        <link>https:/
+
+=================== 7. Corridas del DAG en Airflow ===================
+dag_id            | run_id                            | state   | execution_date            | start_date                       | end_date                        
+datalake_noticias | manual__2026-10-22T12:00:30+00:00 | success | 2026-10-22T12:00:30+00:00 | 2026-10-22T12:00:31.537211+00:00 | 2026-10-22T12:05:07.386278+00:00
+
+Estado de las tareas de la corrida manual__2026-10-22T12:00:30+00:00:
+Usage: airflow tasks [-h] COMMAND ...
+
+Manage tasks
+
+Positional Arguments:
+  COMMAND
+    clear               Clear a set of task instance, as if they never ran
+    failed-deps         Returns the unmet dependencies for a task instance
+    list                List the tasks within a DAG
+    render              Render a task instance's template(s)
+    run                 Run a single task instance
+    state               Get the status of a task instance
+    states-for-dag-run  Get the status of all task instances in a dag run
+    test                Test a task instance
+
+Options:
+  -h, --help            show this help message and exit
+
+airflow tasks command error: argument COMMAND: invalid choice: 'states-for-run' (choose from clear, failed-deps, list, render, run, state, states-for-dag-run, test), see help above.
+
+=================== 8. Registros con fuente, lote y tarea (todos los intentos) ===================
+### logs/dag_id=datalake_noticias/run_id=manual__2026-10-22T12:00:30+00:00/task_id=extraer_bronze/attempt=1.log
+[2026-10-22T12:05:06.595+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=extraer_bronze] [fuente=eltiempo_colombia] ingerida: 10 noticias, sha256=5647f759b940
+[2026-10-22T12:05:06.763+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=extraer_bronze] [fuente=eltiempo_medellin] ingerida: 10 noticias, sha256=751f64cbe088
+[2026-10-22T12:05:06.950+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=extraer_bronze] [fuente=eltiempo_justicia] ingerida: 10 noticias, sha256=d0323699fc52
+[2026-10-22T12:05:07.013+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=extraer_bronze] [fuente=-] lote COMPLETA: 30 noticias recibidas
+### logs/dag_id=datalake_noticias/run_id=manual__2026-10-22T12:00:30+00:00/task_id=validar_configuracion/attempt=1.log
+[2026-10-22T12:00:32.088+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=validar_configuracion] [fuente=-] 3 fuentes configuradas: ['eltiempo_colombia', 'eltiempo_medellin', 'eltiempo_justicia']
+### logs/dag_id=datalake_noticias/run_id=manual__2026-10-22T12:00:30+00:00/task_id=validar_configuracion/attempt=2.log
+[2026-10-22T12:02:50.179+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=validar_configuracion] [fuente=-] 3 fuentes configuradas: ['eltiempo_colombia', 'eltiempo_medellin', 'eltiempo_justicia']
+### logs/dag_id=datalake_noticias/run_id=manual__2026-10-22T12:00:30+00:00/task_id=validar_configuracion/attempt=3.log
+[2026-10-22T12:05:03.993+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=validar_configuracion] [fuente=-] 3 fuentes configuradas: ['eltiempo_colombia', 'eltiempo_medellin', 'eltiempo_justicia']
+[2026-10-22T12:05:04.632+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=validar_configuracion] [fuente=-] acceso verificado: S3, Glue y Athena
+[2026-10-22T12:05:04.633+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=validar_configuracion] [fuente=-] modo NUEVA_EXTRACCION, fecha de ingesta 2026-10-22
+### logs/scheduler/2026-10-22/dag_datalake_noticias.py.log

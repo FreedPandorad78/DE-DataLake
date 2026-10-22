@@ -1,0 +1,13 @@
+sources:
+  - source_id: eltiempo_colombia
+    medio: El Tiempo
+    seccion: Colombia
+    url: https://www.eltiempo.com/rss/colombia.xml
+  - source_id: eltiempo_medellin
+    medio: El Tiempo
+    seccion: Medellín
+    url: https://www.eltiempo.com/rss/colombia_medellin.xml
+  - source_id: eltiempo_justicia
+    medio: El Tiempo
+    seccion: Justicia
+    url: https://www.eltiempo.com/rss/justicia.xml

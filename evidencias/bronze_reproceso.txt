@@ -1,0 +1,5 @@
+Objetos en Bronze antes del reproceso:   7
+Objetos en Bronze después del reproceso: 7
+[2026-10-22T12:34:26.297+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=validar_configuracion] [fuente=-] modo REPROCESO: se reutiliza el lote existente de Bronze
+[2026-10-22T12:34:26.300+0000] {python.py:240} INFO - Done. Returned value was: {'modo': 'REPROCESO', 'lote': 'manual__2026-10-22T12_00_30_00_00', 'fecha': '2026-10-22'}
+[2026-10-22T12:34:27.770+0000] {common.py:73} INFO - [lote=manual__2026-10-22T12_00_30_00_00] [tarea=extraer_bronze] [fuente=-] no se consultan los RSS
